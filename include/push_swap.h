@@ -36,6 +36,8 @@ typedef struct s_stack
 // Utils
 
 // Operations
+void	pa(t_stack **a, t_stack **b, bool print);
+void	pb(t_stack **a, t_stack **b, bool print);
 
 // Algorithm
 

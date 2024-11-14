@@ -10,4 +10,41 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "push_swap.h"
 
+static void	push(t_stack **dst, t_stack **src)
+{
+	t_stack	*n_push;
+
+	if (!*src)
+		return ;
+	n_push = *src;
+	*src = (*src)->next;
+	if (*src)
+		(*src)->prev = NULL;
+	if (!*dst)
+	{
+		*dst = n_push;
+		n_push->next = NULL;
+	}
+	else
+	{
+		n_push->next = *dst;
+		n_push->next->prev = n_push;
+		*dst = n_push;
+	}
+}
+
+void	pa(t_stack **a, t_stack **b, bool print)
+{
+	push(a, b);
+	if (print)
+		ft_printf("pa\n");
+}
+
+void	pb(t_stack **a, t_stack **b, bool print)
+{
+	push(b, a);
+	if (!print)
+		ft_printf("pb\n");
+}
