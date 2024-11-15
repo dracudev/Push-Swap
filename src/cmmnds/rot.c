@@ -6,7 +6,7 @@
 /*   By: antandre <antandre@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 16:31:38 by antandre          #+#    #+#             */
-/*   Updated: 2024/11/15 12:57:50 by antandre         ###   ########.fr       */
+/*   Updated: 2024/11/15 12:59:00 by antandre         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -40,7 +40,7 @@ void	rb(t_stack **b, bool print)
 		ft_printf("rb\n");
 }
 
-void	rr(t_stack **a, t_stack *bb, bool print)
+void	rr(t_stack **a, t_stack *b, bool print)
 {
 	rotate(a);
 	rotate(b);
