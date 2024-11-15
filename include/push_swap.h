@@ -6,7 +6,7 @@
 /*   By: antandre <antandre@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 14:35:19 by antandre          #+#    #+#             */
-/*   Updated: 2024/11/14 13:23:13 by antandre         ###   ########.fr       */
+/*   Updated: 2024/11/15 12:58:26 by antandre         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -41,6 +41,9 @@ void	pb(t_stack **a, t_stack **b, bool print);
 void	sa(t_stack **a, bool print);
 void	sb(t_stack **b, bool print);
 void	ss(t_stack **a, t_stack **b, bool print);
+void	ra(t_stack **a, bool print);
+void	rb(t_stack **b, bool print);
+void	rr(t_stack **a, t_stack *bb, bool print);
 
 // Algorithm
 
