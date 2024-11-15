@@ -6,7 +6,7 @@
 /*   By: antandre <antandre@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 16:31:38 by antandre          #+#    #+#             */
-/*   Updated: 2024/11/15 12:59:00 by antandre         ###   ########.fr       */
+/*   Updated: 2024/11/15 13:03:51 by antandre         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -18,7 +18,7 @@ static void	rot(t_stack **s)
 
 	if (!*s || !(*s)->next)
 		return;
-	last_n = find_last(*s);
+	last_n = f_last(*s);
 	last_n->next = *s;
 	*s = (*s)->next;
 	(*s)->prev = NULL;

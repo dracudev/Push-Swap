@@ -6,7 +6,7 @@
 /*   By: antandre <antandre@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 14:35:19 by antandre          #+#    #+#             */
-/*   Updated: 2024/11/15 12:58:26 by antandre         ###   ########.fr       */
+/*   Updated: 2024/11/15 13:17:59 by antandre         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -34,6 +34,7 @@ typedef struct s_stack
 // Inits
 
 // Utils
+t_stack	*f_last(t_stack *s);
 
 // Operations
 void	pa(t_stack **a, t_stack **b, bool print);
@@ -44,6 +45,9 @@ void	ss(t_stack **a, t_stack **b, bool print);
 void	ra(t_stack **a, bool print);
 void	rb(t_stack **b, bool print);
 void	rr(t_stack **a, t_stack *bb, bool print);
+void	rra(t_stack **a, bool print);
+void	rrb(t_stack **b, bool print);
+void	rrr(t_stack **a, t_stack **b, bool print);
 
 // Algorithm
 
