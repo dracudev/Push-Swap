@@ -22,7 +22,7 @@ int	main(int argc, char **argv)
 	if (argc == 1 || (argc == 2 && !argv[1][0]))
 		return (1);
 	else if (argc == 2)
-		argv = ft_split(argv[1], ' '); //Update my ft_split
+		argv = ft_split(argv[1], ' ');
 	init_a(&a, argv + 1); //Define function
 	if (!is_sorted(a)) //Define function
 	{
@@ -33,6 +33,6 @@ int	main(int argc, char **argv)
 		else
 			s_sort(&a, &b); //Define function
 	}
-	s_free(&a); //Define function
+	s_free(&a);
 	return (0);
 }
