@@ -6,7 +6,7 @@
 /*   By: antandre <antandre@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 14:35:19 by antandre          #+#    #+#             */
-/*   Updated: 2024/11/15 13:45:22 by antandre         ###   ########.fr       */
+/*   Updated: 2024/11/16 12:45:22 by antandre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,15 @@ void	free_err(t_stack **a);
 
 // Utils
 t_stack	*f_last(t_stack *s);
+t_stack	*f_min(t_stack *s);
+t_stack	*f_max(t_stack *s);
+bool	is_sorted(t_stack *s);
+void	c_index(t_stack *s);
+void	cheap_set(t_stack *s);
+void	cheap_get(t_stack *s);
+void	n_init_a(t_stack *a, t_stack *b);
+void	n_init_n(t_stacke *a, t_stack *b);
+
 
 // Operations
 void	pa(t_stack **a, t_stack **b, bool print);

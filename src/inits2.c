@@ -1,33 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   inits2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antandre <antandre@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/22 18:05:54 by antandre          #+#    #+#             */
-/*   Updated: 2024/06/23 14:41:49 by antandre         ###   ########.fr       */
+/*   Created: 2024/11/13 16:35:36 by antandre          #+#    #+#             */
+/*   Updated: 2024/11/16 13:35:37 by antandre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-/*
- * Counts the number of nodes of a list.
- * Iterate over the list increasing 'len' until lst = NULL.
- */
-
-int	ft_lstsize(t_list *lst)
-{
-	int	len;
-
-	if (!lst)
-		return (0);
-	len = 0;
-	while (lst != NULL)
-	{
-		len++;
-		lst = lst->next;
-	}
-	return (len);
-}
+//atol
+//n_append
+//s_init_a
