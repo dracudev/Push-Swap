@@ -22,6 +22,7 @@ static void	push(t_stack **dst, t_stack **src)
 	*src = (*src)->next;
 	if (*src)
 		(*src)->prev = NULL;
+	n_push->prev = NULL;
 	if (!*dst)
 	{
 		*dst = n_push;
@@ -38,11 +39,11 @@ static void	push(t_stack **dst, t_stack **src)
 void	pa(t_stack **a, t_stack **b, bool print)
 {
 	push(a, b);
-	if (print)
+	if (!print)
 		ft_printf("pa\n");
 }
 
-void	pb(t_stack **a, t_stack **b, bool print)
+void	pb(t_stack **b, t_stack **a, bool print)
 {
 	push(b, a);
 	if (!print)
