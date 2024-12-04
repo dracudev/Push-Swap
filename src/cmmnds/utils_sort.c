@@ -30,7 +30,7 @@ static void	rev_rot_both(t_stack **a, t_stack **b, t_stack *n_cheap)
 
 void	a_to_b(t_stack **a, t_stack **b)
 {
-	t_stack *n_cheap;
+	t_stack	*n_cheap;
 
 	n_cheap = cheap_get(*a);
 	if (n_cheap->up_media && n_cheap->target->up_media)
@@ -58,4 +58,3 @@ void	min_on_top(t_stack **a)
 			rra(a, false);
 	}
 }
-

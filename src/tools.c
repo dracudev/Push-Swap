@@ -1,14 +1,14 @@
-/******************************************************************************/
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   tools.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antandre <antandre@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 16:34:54 by antandre          #+#    #+#             */
 /*   Updated: 2024/11/16 12:32:33 by antandre         ###   ########.fr       */
 /*                                                                            */
-/******************************************************************************/
+/* ************************************************************************** */
 
 #include "push_swap.h"
 
@@ -40,7 +40,7 @@ t_stack	f_min(t_stack *s)
 	t_stack	*n_min;
 
 	if (!s)
-		return(NULL);
+		return (NULL);
 	min = LONG_MAX;
 	while (s)
 	{
@@ -82,15 +82,15 @@ void	c_index(t_stack *s)
 	i = 0;
 	if (!s)
 		return ;
-		media = ft_lstsize(s) / 2;
-		while (s)
-		{
-			s->index = i;
-			if (i <= media)
-				s->up_media = true;
-			else
-				s->up_media = false;
-			s = s->next;
-			++i;
-		}
+	media = ft_lstsize(s) / 2;
+	while (s)
+	{
+		s->index = i;
+		if (i <= media)
+			s->up_media = true;
+		else
+			s->up_media = false;
+		s = s->next;
+		++i;
+	}
 }

@@ -36,7 +36,7 @@ int		s_free(t_stack **s);
 void	free_err(t_stack **a);
 
 // Inits
-void	s_init_a(t_stack **a, char **argv)
+void	s_init_a(t_stack **a, char **argv);
 void	n_init_a(t_stack *a, t_stack *b);
 void	n_init_b(t_stacke *a, t_stack *b);
 

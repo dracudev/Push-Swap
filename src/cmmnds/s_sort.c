@@ -25,14 +25,14 @@ void	three_sort(t_stack **a)
 		sa(a, false);
 }
 
-void s_sort(t_stack **a, t_stack **b)
+void	s_sort(t_stack **a, t_stack **b)
 {
 	int	a_len;
 
 	a_len = ft_lstsize(*a);
-	if (a_len-- > 3 && !is_sorted(*a));
+	if (a_len-- > 3 && !is_sorted(*a))
 		pb(b, a, false);
-	if (a_len-- > 3 && !is_sorted(*a));
+	if (a_len-- > 3 && !is_sorted(*a))
 		pb(b, a, false);
 	while (a_len-- > 3 && !is_sorted(*a))
 	{

@@ -16,7 +16,7 @@ static void	a_target(t_stack *a, t_stack *b)
 {
 	t_stack	*current_b;
 	t_stack	*n_target;
-	long			i_match;
+	long	i_match;
 
 	while (a)
 	{
@@ -44,7 +44,7 @@ static void	b_target(t_stack *a, t_stack *b)
 {
 	t_stack	*current_a;
 	t_stack	*n_target;
-	long			i_match;
+	long	i_match;
 
 	while (b)
 	{

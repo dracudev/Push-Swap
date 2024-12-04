@@ -15,7 +15,7 @@
 static long	atol(const char *s)
 {
 	long	res;
-	int	sign;
+	int		sign;
 
 	res = 0;
 	sign = 1;
