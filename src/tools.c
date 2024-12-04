@@ -34,7 +34,7 @@ bool	is_sorted(t_stack *s)
 	return (true);
 }
 
-t_stack	f_min(t_stack *s)
+t_stack	*f_min(t_stack *s)
 {
 	long	min;
 	t_stack	*n_min;
@@ -54,7 +54,7 @@ t_stack	f_min(t_stack *s)
 	return (n_min);
 }
 
-t_stack	f_max(t_stack *s)
+t_stack	*f_max(t_stack *s)
 {
 	long	max;
 	t_stack	*n_max;
@@ -82,7 +82,7 @@ void	c_index(t_stack *s)
 	i = 0;
 	if (!s)
 		return ;
-	media = ft_lstsize(s) / 2;
+	media = s_len(s) / 2;
 	while (s)
 	{
 		s->index = i;

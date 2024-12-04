@@ -23,12 +23,12 @@ int	main(int argc, char **argv)
 		return (1);
 	else if (argc == 2)
 		argv = ft_split(argv[1], ' ');
-	init_a(&a, argv + 1);
+	s_init_a(&a, argv + 1);
 	if (!is_sorted(a))
 	{
-		if (ft_lstsize(a) == 2)
+		if (s_len(a) == 2)
 			sa(&a, false);
-		else if (ft_lstsize(a) == 3)
+		else if (s_len(a) == 3)
 			three_sort(&a);
 		else
 			s_sort(&a, &b);

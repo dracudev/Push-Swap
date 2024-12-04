@@ -14,7 +14,7 @@
 
 void	three_sort(t_stack **a)
 {
-	t_stack	n_big;
+	t_stack	*n_big;
 
 	n_big = f_max(*a);
 	if (n_big == *a)
@@ -29,7 +29,7 @@ void	s_sort(t_stack **a, t_stack **b)
 {
 	int	a_len;
 
-	a_len = ft_lstsize(*a);
+	a_len = s_len(*a);
 	if (a_len-- > 3 && !is_sorted(*a))
 		pb(b, a, false);
 	if (a_len-- > 3 && !is_sorted(*a))

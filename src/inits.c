@@ -24,8 +24,7 @@ static void	a_target(t_stack *a, t_stack *b)
 		current_b = b;
 		while (current_b)
 		{
-			if (current_b->n < a->n
-				&& current_b->n > i_match)
+			if (current_b->n < a->n && current_b->n > i_match)
 			{
 				i_match = current_b->n;
 				n_target = current_b;
@@ -33,9 +32,9 @@ static void	a_target(t_stack *a, t_stack *b)
 			current_b = current_b->next;
 		}
 		if (i_match == LONG_MIN)
-			a->n_target = f_max(b);
+			a->target = f_max(b);
 		else
-			a->n_target = n_target;
+			a->target = n_target;
 		a = a->next;
 	}
 }
@@ -61,9 +60,9 @@ static void	b_target(t_stack *a, t_stack *b)
 			current_a = current_a->next;
 		}
 		if (i_match == LONG_MAX)
-			b->n_target = f_min(a);
+			b->target = f_min(a);
 		else
-			b->n_target = n_target;
+			b->target = n_target;
 		b = b->next;
 	}
 }
@@ -73,8 +72,8 @@ static void	a_cost(t_stack *a, t_stack *b)
 	int	a_len;
 	int	b_len;
 
-	a_len = ft_lstsize(a);
-	b_len = ft_lstsize(b);
+	a_len = s_len(a);
+	b_len = s_len(b);
 	while (a)
 	{
 		a->cost = a->index;
@@ -94,10 +93,10 @@ void	n_init_a(t_stack *a, t_stack *b)
 	c_index(b);
 	a_target(a, b);
 	a_cost(a, b);
-	set_cheapest(a);
+	cheap_set(a);
 }
 
-void	n_init_b(t_stacke *a, t_stack *b)
+void	n_init_b(t_stack *a, t_stack *b)
 {
 	c_index(a);
 	c_index(b);

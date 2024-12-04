@@ -20,7 +20,7 @@ int	syntax_err(char *s)
 		return (1);
 	while (*++s)
 	{
-		if (!(*s >= '0' && s <= '9'))
+		if (!(*s >= '0' && *s <= '9'))
 			return (1);
 	}
 	return (0);
@@ -39,10 +39,10 @@ int	dup_err(t_stack *a, int nbr)
 	return (0);
 }
 
-int	s_free(t_stack **s)
+void	s_free(t_stack **s)
 {
-	t_stack	aux;
-	t_stack	current;
+	t_stack	*aux;
+	t_stack	*current;
 
 	if (!s)
 		return ;

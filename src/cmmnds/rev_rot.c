@@ -14,7 +14,7 @@
 
 static void	rev_rot(t_stack **s)
 {
-	t_stack	last;
+	t_stack	*last;
 
 	if (!*s || !(*s)->next)
 		return ;

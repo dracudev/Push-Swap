@@ -32,7 +32,7 @@ void	cheap_set(t_stack *s)
 	n_cheap->cheap = true;
 }
 
-void	cheap_get(t_stack *s)
+t_stack	*cheap_get(t_stack *s)
 {
 	if (!s)
 		return (NULL);
@@ -64,4 +64,19 @@ void	prep_push(t_stack **s, t_stack *n_top, char s_name)
 				rrb(s, false);
 		}
 	}
+}
+
+int	s_len(t_stack *s)
+{
+	int	len;
+
+	if (!s)
+		return (0);
+	len = 0;
+	while (s)
+	{
+		s = s->next;
+		len++;
+	}
+	return (len);
 }

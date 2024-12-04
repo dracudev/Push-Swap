@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-static long	atol(const char *s)
+static long	ft_atol(const char *s)
 {
 	long	res;
 	int		sign;
@@ -35,27 +35,27 @@ static long	atol(const char *s)
 
 static void	n_append(t_stack **s, int n)
 {
-	t_stack	*n;
+	t_stack	*node;
 	t_stack	*n_last;
 
 	if (!s)
 		return ;
-	n = malloc(sizeof(t_stack));
-	if (!n)
+	node = malloc(sizeof(t_stack));
+	if (!node)
 		return ;
-	n->next = NULL;
-	n->n = n;
-	n->cheap = 0;
+	node->next = NULL;
+	node->n = n;
+	node->cheap = 0;
 	if (!(*s))
 	{
-		*s = n;
-		n->prev = NULL;
+		*s = node;
+		node->prev = NULL;
 	}
 	else
 	{
 		n_last = f_last(*s);
-		n_last->next = n;
-		n->prev = n_last;
+		n_last->next = node;
+		node->prev = n_last;
 	}
 }
 
@@ -69,7 +69,7 @@ void	s_init_a(t_stack **a, char **argv)
 	{
 		if (syntax_err(argv[i]))
 			free_err(a);
-		n = atol(argv[i]);
+		n = ft_atol(argv[i]);
 		if (n > INT_MAX || n < INT_MIN)
 			free_err(a);
 		if (dup_err(*a, (int)n))
