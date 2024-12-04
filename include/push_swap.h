@@ -36,18 +36,21 @@ int		s_free(t_stack **s);
 void	free_err(t_stack **a);
 
 // Inits
+void	s_init_a(t_stack **a, char **argv)
+void	n_init_a(t_stack *a, t_stack *b);
+void	n_init_b(t_stacke *a, t_stack *b);
 
 // Utils
+void	cheap_set(t_stack *s);
+void	cheap_get(t_stack *s);
+void	prep_push(t_stack **s, t_stack *n_top, char s_name);
+
+// Tools
 t_stack	*f_last(t_stack *s);
 t_stack	*f_min(t_stack *s);
 t_stack	*f_max(t_stack *s);
 bool	is_sorted(t_stack *s);
 void	c_index(t_stack *s);
-void	cheap_set(t_stack *s);
-void	cheap_get(t_stack *s);
-void	n_init_a(t_stack *a, t_stack *b);
-void	n_init_n(t_stacke *a, t_stack *b);
-
 
 // Operations
 void	pa(t_stack **a, t_stack **b, bool print);
@@ -63,5 +66,8 @@ void	rrb(t_stack **b, bool print);
 void	rrr(t_stack **a, t_stack **b, bool print);
 
 // Algorithm
+void	a_to_b(t_stack **a, t_stack **b);
+void	b_to_a(t_stack **a, t_stack **b);
+void	min_on_top(t_stack **a);
 
 #endif
