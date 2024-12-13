@@ -26,8 +26,6 @@
    ./push_swap "1 -45 92 2 34"
    ```
 
-> Explain visualizer and checker
-
 5. Additional Makefile Commands:
 
   - `make clean`: Removes all the object files (*.o) created during the compilation process. This is useful for cleaning up the directory without removing the compiled libraries and the game.
@@ -84,10 +82,26 @@ In this example, push_swap outputs the smallest series of instructions to sort t
 
 <br>
 
+## Checker
+
+- The **Checker** is a utility to verify the correctness of your sorting algorithm. It checks whether the sequence of operations returned by the `push_swap` program sorts the stack properly.
+- **Usage**:
+   - Download the checker binary provided and place it in the same directory as your executable.
+   - Before running, make sure the checker has executable permissions:
+     ```bash
+     chmod +x checker_Mac  # or checker_Linux
+     ```
+   - Test the output of your program with:
+     ```bash
+     ARG="4 10 1 3 2"; ./push_swap $ARG | ./checker_Mac $ARG
+     ```
+
+<br>
+
 ## Benchmarks
 
 To validate the efficiency of the solution:
-- Sorting 100 integers should take fewer than 700 operations.
-- Sorting 500 integers should take fewer than 5500 operations.
-
-> Add more benchmarks
+- Sorting `3` elements should require **2 or 3** instructions.
+- Sorting `5` elements should require **no more than 12** instructions.
+- Sorting `100` elements should take fewer than **1500** instructions.
+- Sorting `500` elements should take fewer than **11500** instructions.
