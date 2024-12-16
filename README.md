@@ -89,11 +89,11 @@ In this example, push_swap outputs the smallest series of instructions to sort t
    - Download the checker binary provided and place it in the same directory as your executable.
    - Before running, make sure the checker has executable permissions:
      ```bash
-     chmod +x checker_Mac  # or checker_Linux
+     chmod +x checker_Linux
      ```
    - Test the output of your program with:
      ```bash
-     ARG="4 10 1 3 2"; ./push_swap $ARG | ./checker_Mac $ARG
+     ARG="4 10 1 3 2"; ./push_swap $ARG | ./checker_Linux $ARG
      ```
 
 <br>
